@@ -1,1 +1,0 @@
-fun evaluate() = 0
