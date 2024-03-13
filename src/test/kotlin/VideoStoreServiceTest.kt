@@ -11,6 +11,15 @@ class VideoStoreServiceTest: DescribeSpec ({
 
             result.shouldContain("Rental Record for John")
         }
+
+        it("returns a statement for the right user in the correct format") {
+            val jane = Customer("jane")
+            val videoStore = VideoStoreService() // class or instance methods?
+
+            val result = videoStore.printStatement(jane)
+
+            result.shouldContain("Rental Record for Jane")
+        }
     }
 })
 
